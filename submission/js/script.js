@@ -1,3 +1,4 @@
+
 const services = [
     { name: "Nails" },
     { name: "Eyelashes" },
@@ -19,6 +20,12 @@ const wishInput = document.getElementById("wishInput");
 const addButton = document.getElementById("addButton");
 const wishList = document.getElementById("wishList");
 
+const savedWishlist = localStorage.getItem("wishlist");
+
+if (savedWishlist) {
+    wishList.innerHTML = savedWishlist;
+}
+
 addButton.addEventListener("click", function () {
     const value = wishInput.value;
 
@@ -37,10 +44,12 @@ addButton.addEventListener("click", function () {
     removeBtn.className = "btn";
     removeBtn.addEventListener("click", function () {
         li.remove();
+        localStorage.setItem("wishlist", wishList.innerHTML);
     });
 
     li.appendChild(removeBtn);
     wishList.appendChild(li);
+    localStorage.setItem("wishlist", wishList.innerHTML);
 
     wishInput.value = "";
 });
