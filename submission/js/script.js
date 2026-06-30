@@ -44,3 +44,23 @@ addButton.addEventListener("click", function () {
 
     wishInput.value = "";
 });
+const contactForm = document.getElementById("contactForm");
+const formMsg = document.getElementById("formMsg");
+
+contactForm.addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    const name = document.getElementById("name").value;
+    const message = document.getElementById("message").value;
+
+    if (name === "" || message === "") {
+        formMsg.textContent = "Please fill in all fields.";
+        formMsg.style.color = "red";
+        return;
+    }
+
+    formMsg.textContent = "Message sent successfully!";
+    formMsg.style.color = "green";
+
+    contactForm.reset();
+});
