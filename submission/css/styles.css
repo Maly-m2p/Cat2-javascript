@@ -302,3 +302,21 @@ footer {
         flex-direction: column;
     }
 }
+#wishList {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+#wishList li {
+    background: var(--surface);
+    margin: 10px auto;
+    padding: 12px 16px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px var(--shadow);
+    max-width: 400px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
