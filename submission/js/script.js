@@ -51,9 +51,10 @@ contactForm.addEventListener("submit", function (e) {
     e.preventDefault();
 
     const name = document.getElementById("name").value;
+    const contact = document.getElementById("contact").value;
     const message = document.getElementById("message").value;
 
-    if (name === "" || message === "") {
+    if (name === "" || contact === "" || message === "") {
         formMsg.textContent = "Please fill in all fields.";
         formMsg.style.color = "red";
         return;
@@ -63,4 +64,22 @@ contactForm.addEventListener("submit", function (e) {
     formMsg.style.color = "green";
 
     contactForm.reset();
+});
+const serviceFilter = document.getElementById("serviceFilter");
+const serviceCards = document.querySelectorAll("#serviceList .card");
+
+serviceFilter.addEventListener("keyup", function () {
+    const value = serviceFilter.value.toLowerCase();
+
+    const cards = document.querySelectorAll("#serviceList .card");
+
+    cards.forEach(function (card) {
+        const text = card.textContent.toLowerCase();
+
+        if (text.includes(value)) {
+            card.style.display = "";
+        } else {
+            card.style.display = "none";
+        }
+    });
 });

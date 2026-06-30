@@ -320,3 +320,44 @@ footer {
     justify-content: space-between;
     align-items: center;
 }
+#serviceFilter {
+    padding: 12px 16px;
+    width: 60%;
+    max-width: 400px;
+
+    border-radius: 25px;
+    border: 1px solid rgba(201, 162, 122, 0.4);
+
+    outline: none;
+    margin-bottom: 20px;
+
+    box-shadow: 0 5px 15px var(--shadow);
+}
+#wishInput {
+    padding: 12px 16px;
+    width: 60%;
+    max-width: 400px;
+
+    border-radius: 25px;
+    border: 1px solid rgba(201, 162, 122, 0.4);
+
+    outline: none;
+    margin: 10px 0 15px 0;
+
+    box-shadow: 0 5px 15px var(--shadow);
+}
+#contactForm input {
+    padding: 12px 16px;
+    width: 80%;
+    max-width: 450px;
+
+    margin: 10px 0;
+
+    border-radius: 25px;
+    border: 1px solid rgba(201, 162, 122, 0.4);
+
+    outline: none;
+
+    box-shadow: 0 5px 15px var(--shadow);
+    font-family: inherit;
+}
