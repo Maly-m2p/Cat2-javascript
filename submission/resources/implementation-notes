@@ -1,0 +1,12 @@
+Implementation Notes
+
+ I displayed the beauty services dynamically by storing them in a JavaScript array of objects and using "forEach()", to create the service cards.
+
+  created a wishlist where users can add their preferred beauty services and remove them whenever they want ,
+I added validation to the contact form to check that all fields are filled in before displaying a success or error message 
+
+I used "localStorage" to save the wishlist so that it remains available even after the page is refreshed.
+
+ I implemented a click-to-reveal feature on the homepage banner using "classList.toggle()" to show and hide a short message when the banner is clicked.
+
+i created a render account,deployed the website, and the live deployment link was added to "submission/resources/links.txt"
