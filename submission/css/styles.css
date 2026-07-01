@@ -20,13 +20,8 @@ body {
     font-family: Arial, sans-serif;
     color: var(--text);
     line-height: 1.6;
-
-    background:
-        radial-gradient(circle at top left, #fff7f2, transparent 60%),
-        radial-gradient(circle at bottom right, #f3ece7, transparent 60%),
-        linear-gradient(#f7f1ec, #f3ece7);
+    background: #e8d8c8;
 }
-
 /* HEADER */
 header {
     display: flex;
@@ -118,7 +113,7 @@ nav a:hover {
     margin-top: 20px;
 
     background: linear-gradient(45deg, var(--accent), var(--highlight));
-    color: white;
+    color: #e8d8c8;
 
     text-decoration: none;
     border-radius: 30px;
@@ -201,13 +196,19 @@ section h2::after {
 }
 
 .card {
-    background: var(--surface);
+    background: linear-gradient(
+        135deg,
+        rgba(68, 41, 41, 0.9),
+        rgba(201, 162, 122, 0.75)
+    );
+
+    color: white;
     padding: 25px;
     text-align: center;
     border-radius: 18px;
 
     box-shadow: 0 12px 30px var(--shadow);
-    border: 1px solid rgba(201, 162, 122, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.15);
 
     transition: 0.3s;
 }
@@ -253,11 +254,17 @@ section h2::after {
 }
 
 .price-card {
-    background: var(--surface);
+    background: linear-gradient(
+        135deg,
+        rgba(42, 26, 26, 0.75),
+        rgba(201, 162, 122, 0.35)
+    );
+
+    color: white;
     padding: 20px;
     border-radius: 18px;
     box-shadow: 0 12px 30px var(--shadow);
-    border-left: 4px solid var(--accent);
+    border: 1px solid rgba(255, 255, 255, 0.15);
     text-align: left;
     transition: 0.3s;
 }
@@ -274,13 +281,17 @@ section h2::after {
 
 /* CONTACT */
 .contact-box {
-    text-align: center;
-    background: var(--surface);
+    background: linear-gradient(
+        135deg,
+        rgba(42, 26, 26, 0.75),
+        rgba(201, 162, 122, 0.35)
+    );
+
+    color: white;
     padding: 2rem;
     border-radius: 15px;
     max-width: 500px;
     margin: auto;
-
     box-shadow: 0 5px 15px var(--shadow);
 }
 
@@ -360,4 +371,19 @@ footer {
 
     box-shadow: 0 5px 15px var(--shadow);
     font-family: inherit;
+}
+.hidden-caption {
+    display: none;
+    margin-top: 20px;
+    color: white;
+    background: rgba(0, 0, 0, 0.4);
+    padding: 10px 15px;
+    border-radius: 10px;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.show-caption {
+    display: block;
 }

@@ -92,3 +92,9 @@ serviceFilter.addEventListener("keyup", function () {
         }
     });
 });
+const hero = document.querySelector(".hero");
+const bannerCaption = document.getElementById("bannerCaption");
+
+hero.addEventListener("click", function () {
+    bannerCaption.classList.toggle("show-caption");
+});
